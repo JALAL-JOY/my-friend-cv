@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>CV Mohamed Atrassi</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Julius+Sans+One&family=Open+Sans&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <style>
+      h1 {
+        font-family: "Julius Sans One", sans-serif;
+      }
+
+      h2 {
+        /* Contact, Skills, Education, About me, Work Experience */
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      h3 {
+        /* Accountant */
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+
+      .jobPosition span,
+      .projectName span {
+        font-family: "Source Sans Pro", sans-serif;
+      }
+
+      .upperCase {
+        text-transform: uppercase;
+      }
+
+      .smallText,
+      .smallText span,
+      .smallText p,
+      .smallText a {
+        font-family: "Source Sans Pro", sans-serif;
+        text-align: justify;
+      }
+
+      /* End Family */
+
+      /* Colors */
+      h1 {
+        color: #111;
+      }
+
+      .leftPanel,
+      .leftPanel a {
+        color: #bebebe;
+        text-decoration: none;
+      }
+
+      .leftPanel h2 {
+        color: rgb(173, 210, 216);
+        font-size: 25px;
+      }
+
+      /* End Colors */
+
+      /* Sizes */
+      h1 {
+        font-weight: 300;
+        font-size: 1.2cm;
+        transform: scale(1, 1.15);
+        margin-bottom: 0.2cm;
+        margin-top: 0.2cm;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin-top: 0.1cm;
+        margin-bottom: 0.1cm;
+      }
+
+      .leftPanel,
+      .leftPanel a {
+        font-size: 0.38cm;
+      }
+
+      .projectName span,
+      .jobPosition span {
+        font-size: 0.35cm;
+      }
+
+      .smallText,
+      .smallText span,
+      .smallText p,
+      .smallText a {
+        font-size: 0.35cm;
+      }
+
+      .leftPanel .smallText,
+      .leftPanel .smallText,
+      .leftPanel .smallText span,
+      .leftPanel .smallText p,
+      .smallText a {
+        font-size: 0.5cm;
+        margin: 0%;
+      }
+
+      .contactIcon {
+        width: 0.5cm;
+        text-align: center;
+      }
+
+      p {
+        margin-top: 0.05cm;
+        margin-bottom: 0.05cm;
+      }
+      /* End Sizes */
+
+      .bolded {
+        font-weight: bold;
+        font-size: 25px;
+      }
+
+      .white {
+        color: white;
+      }
+      /* End Fonts */
+
+      /* Layout */
+      body {
+        background: rgb(204, 204, 204);
+        width: 21cm;
+        height: 29.7cm;
+        margin: 0 auto;
+      }
+
+      /* Printing */
+      page {
+        background: white;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 0.5cm;
+      }
+
+      page[size="A4"] {
+        width: 21cm;
+        height:32.7cm;
+      }
+
+      @page {
+        size: 21cm 32.7cm;
+        padding: 0;
+        margin: 0mm;
+        border: none;
+        border-collapse: collapse;
+      }
+      /* End Printing */
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+      }
+
+      .leftPanel {
+        width: 34%;
+        background-color: #002D62;
+        padding: 0.7cm;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .rightPanel {
+        width: 73%;
+        padding: 0.7cm;
+      }
+
+      .pic1 img {
+        width: 6cm;
+        height: 6cm;
+        margin-bottom: 0.7cm;
+        border-radius: 10px 100px / 120px;
+        border: 0.15cm solid #002D;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+
+      .leftPanel .details {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .skill {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .bottomLineSeparator {
+        border-bottom: 0.05cm solid white;
+      }
+
+      .yearsOfExperience {
+        width: 1.6cm;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .alignleft {
+        text-align: left !important;
+        width: 1cm;
+      }
+
+      .alignright {
+        text-align: right !important;
+        width: 0.6cm;
+        margin-right: 0.1cm;
+      }
+
+      .workExperience > ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .workExperience > ul > li {
+        position: relative;
+        margin: 0;
+        padding-bottom: 0.5cm;
+        padding-left: 0.5cm;
+      }
+      .rightPanel h1{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: center;
+      }
+
+      .workExperience > ul > li:before {
+        background-color: #b8abab;
+        width: 0.05cm;
+        content: "";
+        position: absolute;
+        top: 0.1cm;
+        bottom: -0.2cm; /* change this after border removal */
+        left: 0.05cm;
+      }
+      /* Add or modify these CSS rules */
+.workExperience ul li {
+  font-size: 18px; /* Increased base font size */
+}
+
+.workExperience .smallText {
+  font-size: 18px !important; /* Override the previous smaller font size */
+}
+
+.workExperience .smallText ul li {
+  font-size: 18px;
+  margin-bottom: 10px; /* Add some spacing between list items */
+}
+
+.workExperience .projectName span {
+  font-size: 20px !important; /* Make project name slightly bigger */
+}
+
+.workExperience .jobPosition span:not(.bolded) {
+  font-size: 18px; /* Date text */
+}
+
+.workExperience p {
+  font-size: 18px;
+}
+
+/* If you want to make the Skills text at the bottom also bigger */
+.workExperience .smallText p .bolded {
+  font-size: 20px;
+}
+
+.workExperience .smallText p span:not(.bolded) {
+  font-size: 18px;
+}
+
+      .workExperience > ul > li::after {
+        content: "";
+        position: absolute;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' viewBox='0 0 32 32' focusable='false'%3E%3Ccircle stroke='none' fill='%23484444' cx='16' cy='16' r='10'%3E%3C/circle%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: -0.09cm;
+        top: 0;
+        width: 0.35cm;
+        height: 0.35cm;
+      }
+
+      .jobPosition {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .item {
+        padding-bottom: 0.7cm;
+        padding-top: 0.7cm;
+      }
+
+      .item h2 {
+        margin-top: 0;
+      }
+
+      .lastParagrafNoMarginBottom {
+        margin-bottom: 0;
+      }
+
+      .workExperience > ul > li ul {
+        padding-left: 0.5cm;
+        list-style-type: disc;
+      }
+      .smallText #lii {
+        font-size: x-large;
+      }
+     
+      #namee1 {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        text-align: center;
+      }
+      #half {
+        width: 270px;
+        margin-left: 0px;
+      }
+      #half1 {
+        width: 200px;
+      }
+      .pros {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .all {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .skills-list {
+        padding-left: 10;
+        margin-right: 20px;
+      }
+
+      .skills-list li {
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+
+      .pors {
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+      }
+
+      progress {
+        width: 200px;
+        height: 16px;
+      }
+
+      /* Styling the progress bars */
+      progress::-webkit-progress-bar {
+        background-color: #a4a0a0;
+        border-radius: 10px;
+      }
+
+      progress::-webkit-progress-value {
+        background-color: #1b72dde3;
+        border-radius: 10px;
+      }
+
+      progress {
+        background-color: #b2bb03;
+        border-radius: 10px;
+      }
+     
+.fa-phone {
+  color: #4CAF50; /* Green */
+}
+
+.fa-envelope {
+  color: #2196F3; /* Blue */
+}
+
+.fa-map-marker {
+  color: #F44336; /* Red */
+}
+
+.fa-linkedin-square {
+  color: #0077B5; /* LinkedIn blue */
+}
+
+.fa-instagram {
+  color: #E1306C; 
+}
+
+
+.contactIcon:hover, 
+.fa-instagram:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+.fa{
+  padding: 4px;
+}
+
+.fa-instagram {
+  width: 0.5cm;
+  text-align: center;
+}
+
+    </style>
+  </head>
+  <body>
+    <page size="A4">
+      <div class="container">
+        <div class="leftPanel">
+          <div class="pic1">
+            <img src="PHOTO.png" />
+          </div>
+          <div class="details">
+            <div class="item bottomLineSeparator">
+              <h2>CONTACT</h2>
+              <div class="smallText">
+                <p>
+                  <i class="fa fa-phone contactIcon" aria-hidden="true"></i>
+                  +212 639-020642
+                </p>
+                <p>
+                  <i class="fa fa-envelope contactIcon" aria-hidden="true"></i>
+                  <a href="mailto:Mohatrassi5@gmail.com">
+                    Mohatrassi5@gmail.com
+                  </a>
+                </p>
+                <p>
+                  <i
+                    class="fa fa-map-marker contactIcon"
+                    aria-hidden="true"
+                  ></i>
+                  MAROC, RABAT
+                </p>
+                
+                <p class="lastParagrafNoMarginBottom">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                  <a href="#">  atr4ssi
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="item bottomLineSeparator">
+              <h2>À Propos de Moi</h2>
+              <div class="smallText">
+                <p>
+                  Je suis Mohamed, un jeune homme motivé étudiant l'allemand de façon indépendante. J'ai travaillé chez Starbucks à Rabat, Maroc. J'ai obtenu mon baccalauréat en 2024 et je suis maintenant prêt à entrer sur le marché du travail. Passionné par l'excellence du service client, j'améliore continuellement mes compétences et vise à atteindre mes objectifs de carrière futurs.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h2>Langues</h2>
+              <div class="smallText">
+                <ul id="lii">
+                  <li>Français</li>
+                  <li>Arabe</li>
+                  <li>Anglais</li>
+                  <li>Allemand</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rightPanel">
+          <div>
+            <h1 id="namee" style="background: linear-gradient(90deg, #808d95,rgb(53, 197, 222),rgb(32, 110, 184));
+            background-clip: text;
+            -webkit-background-clip:  text;
+            color: transparent;
+            -webkit-text-fill-color: transparent">
+              Mohamed Atrassi
+              <hr >
+            </h1>
+            <div class="smallText">
+              <h2 id="namee1" style="background: linear-gradient(90deg,rgb(53, 197, 222),rgb(32, 110, 184),#808d95);
+              background-clip: text;
+              -webkit-background-clip:  text;
+              color: transparent;
+              -webkit-text-fill-color: transparent">
+                !!À la Recherche d'un Emploi!!
+                <hr id="half1" />
+              </h2>
+            </div>
+          </div>
+          <div>
+            <h2>Compétences Spécialisées</h2>
+            <div class="all">
+              <div>
+                <ul class="skills-list">
+                  <li>Compétences en Communication</li>
+                  <li>Responsabilité</li>
+                  <li>Langues Étrangères</li>
+                  <li>Adaptabilité</li>
+                  <li>Travail sous pression</li>
+                </ul>
+              </div>
+              <div class="pors">
+                <progress class="pro" value="100" max="100">100%</progress>
+                <progress class="pro" value="90" max="100">85%</progress>
+                <progress class="pro" value="95" max="100">95%</progress>
+                <progress class="pro" value="60" max="100">60%</progress>
+                <progress class="pro" value="50" max="100">50%</progress>
+              </div>
+            </div>
+          </div>
+          <div class="workExperience">
+            <h2>Expérience Professionnelle</h2>
+            <ul>
+              <li>
+                <div class="jobPosition">
+                  <span class="bolded">Starbucks  
+                    Rabat, Maroc  </span>
+                  <span> Début en - Juin 2024 </span>
+                </div>
+                <div class="projectName bolded">
+                  <span> (Auto-employé | Six mois – Présent) </span>
+                </div>
+                <div class="smallText">
+                  <ul>
+                    <li>
+                      Fourniture d'aliments et de boissons aux clients avec un accent sur l'excellence du service client.
+                    </li>
+                    <li>
+                      Assistance à l'entretien et à la propreté du magasin pour maintenir l'espace de travail organisé et accueillant.
+                    </li>
+                    <li>
+                      Travail dans un environnement au rythme rapide, maintenant des normes élevées de qualité et d'efficacité.
+                    </li>
+                    <li>
+                      Assurance de la satisfaction du client en répondant à toutes les demandes ou préoccupations.
+                    </li>
+                  </ul>
+                  <div class="jobPosition">
+                    <span class="bolded">Starbucks  
+                      Rabat, Maroc  </span>
+                    <span> Fin en - Mars 2025 </span>
+                  </div>
+                  <p>
+                    <span class="bolded">Compétences: </span>Travail d'équipe et Collaboration, Service Client 
+                  </p>
+                </div>
+              </li>
+
+              <!--<li>
+                <div class="jobPosition">
+                  <span class="bolded"> Digital Marketing Expert </span>
+                  <span>  </span>
+                </div>
+                <div class="projectName bolded">
+                  <span> Project name | Company name </span>
+                </div>
+                <div class="smallText">
+                  
+                </div>
+              </li>
+            -->
+            <div class="workExperience">
+              <h2>Formation</h2>
+              <ul>
+                <li>
+                  <div class="jobPosition">
+                    <span class="bolded">Années d'Éducation</span>
+              
+                </div>
+                
+                <div class="smallText">
+                  <ul>
+                    <li>
+                      2023-2024 :<br>
+                      LYCÉE DAR ESSALEM
+                      Baccalauréat Sciences Physiques
+                    </li>
+
+                    <li>
+                      2024 : <br>
+                      Candidat Libre Langue Allemande
+                    </li>
+                    <li>
+                      ACTUELLEMENT : <br>
+                      Recherche d'un emploi pour m'aider dans mon parcours
+                    </li>
+                    <li>
+                      Apprentissage de la cuisine dans une école pendant 3 mois
+                    </li>
+                  </ul>
+                  
+                </div>
+                  
+              </div>
+             
+          </div>
+        </div>
+      </div>
+      
+    </page>
+   
+  </body>
+
+</html>
